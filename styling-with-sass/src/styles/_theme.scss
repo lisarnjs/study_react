@@ -1,0 +1,19 @@
+$LIGHT_BG_OUTER: #ecf0f1;
+$LIGHT_FONT_COLOR: #2c3e50;
+$LIGHT_TITLE_COLOR: #f1c40f;
+
+$DARK_BG_OUTER: #2c3e50;
+$DARK_FONT_COLOR: #ecf0f1;
+$DARK_TITLE_COLOR: #e74c3c;
+
+div.app[data-theme="light"] {
+  --color-text: #{$LIGHT_FONT_COLOR};
+  --color-title: #{$LIGHT_TITLE_COLOR};
+  --color-background: #{$LIGHT_BG_OUTER};
+}
+
+div.app[data-theme="dark"] {
+  --color-text: #{$DARK_FONT_COLOR};
+  --color-title: #{$DARK_TITLE_COLOR};
+  --color-background: #{$DARK_BG_OUTER};
+}
