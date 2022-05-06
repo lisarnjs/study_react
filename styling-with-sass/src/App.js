@@ -2,10 +2,17 @@ import "./App.scss";
 import "./styles/_theme.scss";
 import Button from "./components/Button";
 import Mode from "./components/Mode/Mode";
+import { useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState(true);
+
+  const handleClick = () => {
+    setTheme(!theme);
+  };
   return (
-    <div className="app" data-theme="dark">
+    <div className="app" data-theme={theme ? "light" : "dark"}>
+      <button onClick={handleClick}>Cilck Me</button>
       <Mode />
     </div>
   );
